@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+  background: #f5f5f5;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.app {
+  width: 100%;
+  max-width: 500px;
+  padding: 2rem;
+}
+
+.todo-container {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  padding: 2rem;
+  position: relative;
+}
+
+.title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.progress-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.progress-bar-container {
+  flex-grow: 1;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  height: 10px;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+  border-radius: 10px;
+  transition: width 0.3s ease-in-out;
+}
+
+.progress-text {
+  font-weight: 600;
+  color: #333;
+}
+
+.todo-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.todo-input {
+  flex-grow: 1;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.todo-btn {
+  background: #6a11cb;
+  color: white;
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.todo-btn:hover {
+  background: #2575fc;
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9f9f9;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.todo-item.completed p {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.todo-item.completed {
+    background: #e8f5e9;
+}
+
+.todo-item p {
+  margin: 0;
+  flex-grow: 1;
+}
+
+.todo-item div {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.complete-btn, .delete-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.complete-btn {
+  color: #4caf50;
+}
+
+.complete-btn:hover {
+  color: #66bb6a;
+}
+
+.delete-btn {
+  color: #f44336;
+}
+
+.delete-btn:hover {
+  color: #ef5350;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 90%;
+  width: 300px;
+}
+
+.modal-content p {
+  margin: 0 0 1.5rem 0;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.modal-btn {
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.confirm-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.confirm-btn:hover {
+  background-color: #d32f2f;
+}
+
+.cancel-btn {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.cancel-btn:hover {
+  background-color: #bdbdbd;
+}
