@@ -1,0 +1,93 @@
+<svg width="1280" height="640" viewBox="0 0 1280 640" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="dropshadow" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="10"/>
+      <feOffset dx="0" dy="10" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- A more convincing denim texture -->
+    <pattern id="denimTexture" patternUnits="userSpaceOnUse" width="6" height="6">
+      <path d="M0,6 L6,0 M-1.5,1.5 L1.5,-1.5 M4.5,7.5 L7.5,4.5" stroke="#ffffff" stroke-width="0.5" opacity="0.2"/>
+    </pattern>
+    <linearGradient id="denimGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#5c85d6;"/>
+      <stop offset="100%" style="stop-color:#3e5f9e;"/>
+    </linearGradient>
+
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="640" fill="url(#denimGradient)"/>
+  <rect width="1280" height="640" fill="url(#denimTexture)"/>
+
+  <!-- Main Card -->
+  <rect 
+    x="240" 
+    y="100" 
+    width="800" 
+    height="440" 
+    rx="20" 
+    fill="white" 
+    filter="url(#dropshadow)"
+  />
+
+  <!-- Title -->
+  <text 
+    x="640" 
+    y="210" 
+    font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'" 
+    font-size="70" 
+    font-weight="bold" 
+    text-anchor="middle" 
+    fill="#1a1a1a">
+    Lista de Tareas
+  </text>
+
+  <!-- Input Field -->
+  <rect 
+    x="340" 
+    y="280" 
+    width="600" 
+    height="80" 
+    rx="15" 
+    fill="#ffffff"
+    stroke="#bdc3c7"
+    stroke-width="2"
+  />
+  <text 
+    x="365" 
+    y="335" 
+    font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'" 
+    font-size="28"
+    fill="#95a5a6">
+    Ingresar Tarea...
+  </text>
+
+  <!-- Button -->
+  <rect 
+    x="515" 
+    y="410" 
+    width="250" 
+    height="80" 
+    rx="20" 
+    fill="#483D8B"
+  />
+  <text 
+    x="640" 
+    y="465" 
+    font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'" 
+    font-size="32" 
+    font-weight="600"
+    fill="white" 
+    text-anchor="middle">
+    Agregar
+  </text>
+
+</svg>
